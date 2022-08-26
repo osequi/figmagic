@@ -29,5 +29,10 @@ export function processElements(
     makeFigmagicElement(element, config, components[element.id].description, isGraphicElement)
   );
 
+  parsedElements.forEach((element) => {
+    const { config, ...rest } = element;
+    console.log(JSON.stringify(rest, null, 2));
+  });
+
   return parsedElements;
 }

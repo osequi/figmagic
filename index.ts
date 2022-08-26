@@ -26,8 +26,6 @@ const RC_FILES = ['figmagic.json', '.figmagicrc'];
  */
 async function main(): Promise<void> {
   try {
-    console.log('Starting up...');
-
     // Setup environment and user configuration
     loadEnv();
 
@@ -43,13 +41,9 @@ async function main(): Promise<void> {
     else {
       const userConfigPath = configFilePath ? path.join(`${process.cwd()}`, configFilePath) : '';
       const config: Config = await makeConfiguration(userConfigPath, ...CLI_ARGS);
-      console.log('Configuration loaded:', config);
 
       // Get data
       const { recompileLocal, figmagicFolder, figmaData, token, url, versionName } = config;
-
-      console.log('url:', url);
-
       const data: FigmaResponse = await getData(
         recompileLocal,
         figmagicFolder,
