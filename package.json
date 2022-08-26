@@ -66,6 +66,7 @@
     "templates/"
   ],
   "scripts": {
+    "r": "npx tsx index.ts",
     "figmagic": "node build/index.js",
     "clean": "rm -rf .figmagic-trash/",
     "build": "rm -rf build && npx webpack",

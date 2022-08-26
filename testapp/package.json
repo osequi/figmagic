@@ -1,0 +1,13 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "osequi",
+  "license": "MIT",
+  "dependencies": {
+    "build": "link:/home/cs/mtx-fe/figmagic/build"
+  },
+  "scripts": {
+    "f": "npx figmagic"
+  }
+}
